@@ -20,12 +20,9 @@ Update `/usr/local/etc/synology-letsencrypt/env` with domain(s), email, and DNS 
 DOMAINS=(--domains "example.com" --domains "*.example.com")
 EMAIL="user@example.com"
 
-# Specify DNS Provider (this example is from https://go-acme.github.io/lego/dns/simply/)
-DNS_PROVIDER="simply"
-export SIMPLY_ACCOUNT_NAME=XXXXXXX
-export SIMPLY_API_KEY=XXXXXXXXXX
-export SIMPLY_PROPAGATION_TIMEOUT=1800
-export SIMPLY_POLLING_INTERVAL=30
+## Specify DNS Provider (this example is from https://go-acme.github.io/lego/dns/infomaniak/
+DNS_PROVIDER="infomaniak"
+export INFOMANIAK_ACCESS_TOKEN=XXXXXXX
 ```
 
 Now you should be able to run `/usr/local/bin/synology-letsencrypt.sh`.
