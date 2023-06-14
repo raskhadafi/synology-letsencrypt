@@ -50,7 +50,7 @@ install_script() {
     local name="$1"
     local path="/usr/local/bin/$name"
 
-    sudo curl -sSL -o "$path" "https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/$name"
+    sudo curl -sSL -o "$path" "https://raw.githubusercontent.com/raskhadafi/synology-letsencrypt/master/$name"
 
     permissions 755 "$path"
     printf "installed: %s\n" "$path"
@@ -69,12 +69,9 @@ install_configuration() {
 DOMAINS=(--domains "example.com" --domains "*.example.com")
 EMAIL="user@example.com"
 
-## Specify DNS Provider (this example is from https://go-acme.github.io/lego/dns/simply/)
-DNS_PROVIDER="simply"
-export SIMPLY_ACCOUNT_NAME=XXXXXXX
-export SIMPLY_API_KEY=XXXXXXXXXX
-export SIMPLY_PROPAGATION_TIMEOUT=1800
-export SIMPLY_POLLING_INTERVAL=30
+## Specify DNS Provider (this example is from https://go-acme.github.io/lego/dns/infomaniak/
+DNS_PROVIDER="infomaniak"
+export INFOMANIAK_ACCESS_TOKEN=XXXXXXXXXX
 EOF
     fi
 
