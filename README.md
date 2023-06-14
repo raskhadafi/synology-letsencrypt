@@ -9,7 +9,7 @@ Uses [lego](https://go-acme.github.io/lego/) and the [ACME DNS-01 challenge](htt
 To **install** or **update** synology-letsencrypt, run the [install script](install.sh). To do that, either download and run the script manually, or use the following cURL command:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/raskhadafi/synology-letsencrypt/master/install.sh | bash
 ```
 
 ## Configuration
@@ -42,5 +42,5 @@ To schedule a daily task, log into the Synology DSM and add a user-defined scrip
 To **uninstall** synology-letsencrypt, run the [uninstall script](uninstall.sh). To do that, either download and run the script manually, or use the following cURL command:
 
 ```sh
-curl -sSL https://raw.githubusercontent.com/JessThrysoee/synology-letsencrypt/master/uninstall.sh | bash
+curl -sSL https://raw.githubusercontent.com/raskhadafi/synology-letsencrypt/master/uninstall.sh | bash
 ```
